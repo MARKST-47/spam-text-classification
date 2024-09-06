@@ -71,7 +71,7 @@ fig_critics_hist.show()
 
 ### 3. Model Training
 
-The `SpamClassifier` model is trained on the processed data using PyTorch.
+The `SpamClassifier` model is trained on the processed data using PyTorch, then later also trained using Logistic Regression and Random Forest Classifier for comparison.
 
 ```python
 class SpamClassifier(nn.Module):
@@ -90,7 +90,7 @@ class SpamClassifier(nn.Module):
 
 ### 4. Model Evaluation
 
-The model is evaluated on the validation set to check its accuracy and other performance metrics.
+The model is evaluated on the validation set to check its accuracy and other performance metrics(including confusion matrix for sklearn models).
 
 ```python
 train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=10)
@@ -109,6 +109,14 @@ print(f"The message is classified as: {prediction}")
 ## Conclusion
 
 This project demonstrates how to build and train a spam classifier using deep learning. The model is capable of identifying spam messages with a good degree of accuracy after proper preprocessing and training. This project can be further improved by tuning the model, experimenting with different text preprocessing techniques, and using more advanced deep learning architectures.
+
+## Results
+
+PyTorch Deep Learning Model: Achieved 98.2% accuracy in classifying spam and ham messages.
+
+Logistic Regression: Achieved an accuracy of 96.41%.
+
+RandomForest Classifier: Achieved an accuracy of 96.68%.
 
 ## License
 
